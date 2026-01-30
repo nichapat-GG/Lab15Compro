@@ -18,4 +18,13 @@ int main(){
 	return 0;
 }
 
-//Do not modify source code above this line
+void shuffle(int &a,int &b,int &c,int &d){
+	int *arr[4] = {&a, &b, &c, &d};
+	for(int i = 0;i < 4;i++){
+	    int j = rand() %4;
+		int temp = *arr[i];
+		*arr[i] = *arr[j];
+		*arr[j] = temp;
+	}
+}
+
